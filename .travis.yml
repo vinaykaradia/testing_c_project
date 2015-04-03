@@ -1,0 +1,8 @@
+language: c
+install: make get-deps
+./configure && make && make test
+script: scons
+compiler:
+  - clang
+  - gcc
+ 
