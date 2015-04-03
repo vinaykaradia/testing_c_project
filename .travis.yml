@@ -1,4 +1,4 @@
-install: make -k get-deps
+#install: make -k get-deps
 language: c
 script: scons
 compiler:
