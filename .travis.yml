@@ -1,6 +1,5 @@
-language: c
-#language
 install: make get-deps
+language: c
 script: scons
 compiler:
   - clang
