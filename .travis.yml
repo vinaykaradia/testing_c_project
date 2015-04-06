@@ -2,5 +2,6 @@ language: c
 compiler:
   - clang
   - gcc
+script: ./configure && make && make test
 notifications:
   - email: false
