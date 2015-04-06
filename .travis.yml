@@ -1,9 +1,25 @@
-#install: make -k get-deps
+install:
+#Install biicode
+  - wget http://apt.biicode.com/install.sh && chmod +x install.sh && ./install.sh 
+  #Install biicode required C/C++ tools (GCC, cmake, etc)
+  - bii setup:cpp 
+script:
+  #Find biicode dependencies
+  - bii find --update  
+  #Configure block for building
+  - bii cpp:configure 
+  #Build block
+  - bii cpp:build 
+  #Run tests
+  - ./bin/developer_cppmath_tests --reporter=info 
 deploy:
   provider: biicode
-  user: "vinaykaradia"
-  password: travis encrypt "pPx!111Iz" --add deploy.password
-
+  user: vinaykaradia
+  password: pPx!111Iz
+    secure: travis encrypt "pPx!111Iz" --add deploy.password
+  on:
+    repo: vinaykaradia/testing_c_project
+ #GitHub repo
 language: c
 script: scons
 compiler:
