@@ -3,15 +3,13 @@ compiler:
   - clang
   - gcc
 install:
-- "./bin/download-deps.sh"
-- "sudo apt-get install scons"
-- "sudo apt-get --no-install-recommends -y install python-epydoc python-docutils python-pygments"
-- "sudo apt-get --no-install-recommends -y install docbook5-xml xsltproc imagemagick"
+ - "./bin/download-deps.sh"
+ - "sudo apt-get install scons"
+
 script:
-- "scons user-doc"
-- "scons api-doc"
-- "scons unit-test"
-- "SCONS_EXTERNAL_TEST=1 python runtest.py -a"
+ - "scons user-doc"
+ - "scons api-doc"
+ - "scons unit-test"
 
 notifications:
   - email: false
