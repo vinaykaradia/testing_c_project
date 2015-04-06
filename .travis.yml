@@ -1,8 +1,8 @@
 language: c
 compiler:
   - gcc
-script:
-  - ./configure && make 
+#script:
+ # - ./configure && make 
   #- scons
 notifications:
   - email: false
