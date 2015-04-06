@@ -10,8 +10,6 @@ script:
   - bii cpp:configure 
   #Build block
   - bii cpp:build 
-  #Run tests
-  - ./bin/developer_cppmath_tests --reporter=info 
 deploy:
   provider: biicode
   user: vinaykaradia
