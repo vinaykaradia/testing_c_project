@@ -2,6 +2,8 @@ language: c
 compiler:
   - clang
   - gcc
-script: ./configure && make && make test
+script:
+  - ./configure && make 
+  #- scons
 notifications:
   - email: false
