@@ -2,14 +2,5 @@ language: c
 compiler:
   - clang
   - gcc
-install:
- - "./bin/download-deps.sh"
- - "sudo apt-get install scons"
-
-script:
- - "scons user-doc"
- - "scons api-doc"
- - "scons unit-test"
-
 notifications:
   - email: false
