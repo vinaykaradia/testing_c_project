@@ -1,1 +1,0 @@
-gcc helloworld.c -o hello
