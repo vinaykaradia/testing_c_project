@@ -1,1 +1,2 @@
-gcc helloworld.c -o hello
+program: hello 
+		gcc -o helloworld.c hello
